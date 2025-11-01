@@ -146,7 +146,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initCharts();
   initChatbot();
   initChips();
-  initCursor();
 });
 
 function setCurrentYear() {
@@ -653,42 +652,4 @@ function getTopGrowthRole() {
     }
   });
   return { role: topRole, multiplier: topMultiplier };
-}
-
-// --- Cursor ---
-function initCursor() {
-  const dot = document.getElementById("cursor-dot");
-  const ring = document.getElementById("cursor-ring");
-
-  if (!dot || !ring) return;
-
-  const enableCustomCursor =
-    window.matchMedia("(pointer: fine)").matches &&
-    !window.matchMedia("(max-width: 640px)").matches;
-
-  if (!enableCustomCursor) {
-    dot.style.display = "none";
-    ring.style.display = "none";
-    document.body.style.cursor = "auto";
-    return;
-  }
-
-  let ringTimeout;
-
-  window.addEventListener("pointermove", (event) => {
-    const { clientX, clientY } = event;
-    dot.style.transform = `translate3d(${clientX}px, ${clientY}px, 0)`;
-    ring.style.transform = `translate3d(${clientX}px, ${clientY}px, 0)`;
-    dot.classList.add("visible");
-    ring.classList.add("visible");
-
-    ring.classList.add("active");
-    clearTimeout(ringTimeout);
-    ringTimeout = setTimeout(() => ring.classList.remove("active"), 120);
-  });
-
-  document.querySelectorAll("a, button, .chip").forEach((interactive) => {
-    interactive.addEventListener("mouseenter", () => ring.classList.add("active"));
-    interactive.addEventListener("mouseleave", () => ring.classList.remove("active"));
-  });
 }
