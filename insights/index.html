@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Forecast & Strategy | TalentSignals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body data-page="insights">
+    <header class="glass-header">
+      <nav class="nav">
+        <div class="brand">TalentSignals</div>
+        <div class="nav-links">
+          <a href="/talent-signals-dashboard/">Overview</a>
+          <a href="/talent-signals-dashboard/roles/">Roles & Skills</a>
+          <a href="/talent-signals-dashboard/insights/" aria-current="page">Forecast & Strategy</a>
+          <a href="mailto:info@talentsignals.ai">Contact</a>
+          <a
+            class="cta-button"
+            href="https://www.linkedin.com/in/tpodolskiy"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="glass-panel hero">
+        <div class="hero-copy">
+          <span class="badge">Strategic Outlook</span>
+          <h1>Budget, geography, and scenario planning through 2035</h1>
+          <p>
+            Tie together investment plans with regional readiness and contingency
+            models. Navigate where to double down, pause, or rebalance your
+            product organization for durable velocity.
+          </p>
+          <div class="hero-actions">
+            <a class="cta-button" href="#budget">Budget mix</a>
+            <a class="cta-button" href="#scenarios">Scenario planning</a>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span>Cloud & AI share of R&D budget 2030</span>
+            <strong>42%</strong>
+          </div>
+          <div class="stat-card">
+            <span>Global product squads run hybrid-first</span>
+            <strong>58%</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="glass-panel" id="budget">
+        <div class="section-title">
+          <h2>Budget composition</h2>
+          <p>Engineering & product investment mix (2016 – 2035)</p>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="investmentChart"></canvas>
+        </div>
+      </section>
+
+      <section class="glass-panel" id="geography">
+        <div class="section-title">
+          <h2>Regional momentum</h2>
+          <p>Talent hub expansion index</p>
+        </div>
+        <div class="layout-split">
+          <div class="chart-wrapper">
+            <canvas id="regionalChart"></canvas>
+          </div>
+          <ul class="insight-list">
+            <li>
+              LATAM and Central Europe are the fastest-growing remote product hubs as
+              leaders invest in follow-the-sun experimentation lanes.
+            </li>
+            <li>
+              North America maintains the deepest AI platform expertise, but APAC is
+              closing the gap in applied ML and design systems.
+            </li>
+            <li>
+              Distributed squads that co-locate quarterly report 19% stronger release
+              quality and higher retention.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="glass-panel" id="scenarios">
+        <div class="section-title">
+          <h2>Scenario planning</h2>
+          <p>Hiring velocity under varied macro assumptions</p>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="scenarioChart"></canvas>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> TalentSignals. Built for strategic operators.</span>
+      <a
+        class="link-inline"
+        href="https://www.linkedin.com/in/tpodolskiy"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Connect on LinkedIn</a
+      >
+    </footer>
+
+    <button class="chatbot-toggle" aria-controls="chatbot-panel" aria-expanded="false">
+      ✦
+    </button>
+    <div class="chatbot-panel" id="chatbot-panel">
+      <div>
+        <h3>Trend Copilot</h3>
+        <p class="badge">Discuss budget, regions, or scenario trade-offs.</p>
+      </div>
+      <div class="chips">
+        <span class="chip" data-question="How should I allocate AI budget next year?">AI budget</span>
+        <span class="chip" data-question="Which regions are emerging fastest?">Regional shifts</span>
+        <span class="chip" data-question="What is the conservative hiring forecast?">Conservative scenario</span>
+      </div>
+      <div class="chatbot-history" id="chatbot-history"></div>
+      <div class="chatbot-input-row">
+        <input
+          type="text"
+          id="chatbot-input"
+          placeholder="Ask about budgets, regions, or scenarios..."
+          aria-label="Ask Trend Copilot"
+        />
+        <button class="chatbot-send" id="chatbot-send">Send</button>
+      </div>
+    </div>
+
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <script src="../app.js"></script>
+  </body>
+</html>

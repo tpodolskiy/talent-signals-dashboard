@@ -548,23 +548,26 @@ canvas {
   }
 
   .cursor-dot {
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background: white;
+    background: radial-gradient(circle at 30% 30%, #e0f2fe 0%, #38bdf8 40%, rgba(56, 189, 248, 0.15) 100%);
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.55),
+      0 0 22px rgba(236, 72, 153, 0.28);
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity var(--transition-base);
   }
 
   .cursor-ring {
-    width: 34px;
-    height: 34px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(125, 211, 252, 0.6);
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: transform var(--transition-base), opacity var(--transition-base);
+    box-shadow: 0 0 35px rgba(56, 189, 248, 0.25);
   }
 
   .cursor-dot.visible,
@@ -573,8 +576,8 @@ canvas {
   }
 
   .cursor-ring.active {
-    transform: translate(-50%, -50%) scale(1.55);
-    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1.35);
+    opacity: 0.5;
   }
 }
 
