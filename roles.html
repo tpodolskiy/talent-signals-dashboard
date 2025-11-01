@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Roles & Skills | TalentSignals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body data-page="roles">
+    <header class="glass-header">
+      <nav class="nav">
+        <div class="brand">TalentSignals</div>
+        <div class="nav-links">
+          <a href="index.html">Overview</a>
+          <a href="roles.html" aria-current="page">Roles & Skills</a>
+          <a href="insights.html">Forecast & Strategy</a>
+          <a href="mailto:info@talentsignals.ai">Contact</a>
+          <a
+            class="cta-button"
+            href="https://www.linkedin.com/in/tpodolskiy"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="glass-panel hero">
+        <div class="hero-copy">
+          <span class="badge">Role Intelligence</span>
+          <h1>Engineering, product, and design teams in motion</h1>
+          <p>
+            Compare growth momentum, compensation arcs, and capability heatmaps
+            across delivery functions. Blend this view with internal planning to
+            calibrate hiring bets.
+          </p>
+          <div class="hero-actions">
+            <a class="cta-button" href="#role-growth">View role growth</a>
+            <a class="cta-button" href="#skill-matrix">Explore skills</a>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span>Net-new product pods 2024</span>
+            <strong>1,420</strong>
+          </div>
+          <div class="stat-card">
+            <span>Cross-functional teams hiring AI talent</span>
+            <strong>72%</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="glass-panel" id="role-growth">
+        <div class="section-title">
+          <h2>Role trajectory</h2>
+          <p>Annual headcount velocity by function (2016 – 2035)</p>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="roleGrowthChart"></canvas>
+        </div>
+      </section>
+
+      <section class="glass-panel" id="compensation">
+        <div class="section-title">
+          <h2>Compensation benchmarking</h2>
+          <p>Median global salary projections (USD)</p>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="compensationChart"></canvas>
+        </div>
+      </section>
+
+      <section class="glass-panel" id="skill-matrix">
+        <div class="section-title">
+          <h2>Capabilities matrix</h2>
+          <p>Skill readiness index for 2025 cohorts</p>
+        </div>
+        <div class="layout-split">
+          <div class="chart-wrapper">
+            <canvas id="skillMatrixChart"></canvas>
+          </div>
+          <ul class="insight-list">
+            <li>
+              Platform and AI alignment unlocks 2.7x faster release cadences where
+              reliability and ML teams share tooling.
+            </li>
+            <li>
+              Product & design squads that embed data storytelling close decision
+              loops 18% faster, improving iteration throughput.
+            </li>
+            <li>
+              QA automation remains essential, yet observability literacy is the
+              differentiator in modern resilience pods.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> TalentSignals. Insights across the product stack.</span>
+      <a
+        class="link-inline"
+        href="https://www.linkedin.com/in/tpodolskiy"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Connect on LinkedIn</a
+      >
+    </footer>
+
+    <button class="chatbot-toggle" aria-controls="chatbot-panel" aria-expanded="false">
+      ✦
+    </button>
+    <div class="chatbot-panel" id="chatbot-panel">
+      <div>
+        <h3>Trend Copilot</h3>
+        <p class="badge">Ask about headcount, skills, or pay curves.</p>
+      </div>
+      <div class="chips">
+        <span class="chip" data-question="Which engineering roles are outrunning demand?">Top roles</span>
+        <span class="chip" data-question="Where is salary growth strongest?">Salary growth</span>
+        <span class="chip" data-question="How should teams balance QA and platform hires?">QA vs platform</span>
+      </div>
+      <div class="chatbot-history" id="chatbot-history"></div>
+      <div class="chatbot-input-row">
+        <input
+          type="text"
+          id="chatbot-input"
+          placeholder="Ask about engineering, product, or design roles..."
+          aria-label="Ask Trend Copilot"
+        />
+        <button class="chatbot-send" id="chatbot-send">Send</button>
+      </div>
+    </div>
+
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

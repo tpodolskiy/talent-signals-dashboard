@@ -1,0 +1,41 @@
+Skill,Demand_2015,Demand_2020,Demand_2025,Projected_Demand_2030,Projected_Demand_2035
+Selenium,85,92,88,82,75
+Appium,45,78,85,88,85
+TestComplete,62,58,48,35,25
+Cypress,0,45,92,95,92
+Playwright,0,8,78,92,95
+JUnit,78,82,78,72,68
+TestNG,68,75,72,68,62
+Pytest,42,68,88,92,95
+Jest,0,52,82,88,92
+Mocha,0,38,65,68,72
+Jenkins,72,88,95,92,88
+GitLab CI,0,42,85,92,95
+CircleCI,0,28,72,78,82
+Travis CI,48,35,28,18,12
+Azure DevOps,25,58,88,95,98
+Docker,15,72,92,95,98
+Kubernetes,5,45,88,95,98
+AWS,35,75,95,98,98
+Azure Cloud,12,58,92,95,98
+GCP,8,42,85,92,95
+REST API Testing,55,78,95,98,98
+GraphQL Testing,0,15,68,85,92
+Postman,38,85,98,95,92
+SoapUI,45,42,38,25,18
+REST Assured,32,58,85,92,95
+AI/ML Testing,0,5,72,95,98
+ChatGPT for Testing,0,0,58,88,95
+Test.ai,0,2,48,78,88
+Applitools,0,8,75,92,95
+Mabl,0,5,62,85,92
+Performance Testing,68,75,82,85,88
+JMeter,52,68,78,82,85
+LoadRunner,48,42,35,28,22
+Gatling,22,48,72,85,88
+K6,0,18,68,82,88
+Security Testing,42,62,88,95,98
+OWASP ZAP,28,48,85,92,95
+Burp Suite,35,52,82,88,92
+Snyk,0,12,78,92,95
+SonarQube,25,48,82,88,92

@@ -1,0 +1,16 @@
+Trend,Adoption_2020_Percent,Adoption_2023_Percent,Adoption_2025_Percent,Projected_2028_Percent,Projected_2030_Percent,Impact_Rating
+AI-Powered Testing Adoption,5,18,45,72,85,95
+Shift-Left Testing Practices,35,49,60,75,82,88
+Cloud-Based Testing Platforms,42,68,82,92,95,85
+DevOps/CI-CD Integration,55,73,88,95,98,92
+Continuous Testing Adoption,48,65,76,88,92,90
+Test Automation Coverage,44,58,70,82,88,85
+Manual Testing Reduction,26,18,14,8,5,75
+Low-Code/No-Code Testing Tools,8,22,38,58,72,70
+API Testing Growth,62,78,88,95,98,88
+Security Testing Focus,48,68,82,92,95,92
+Performance Testing Demand,58,72,82,88,92,82
+Mobile Testing Requirements,72,85,92,95,98,85
+IoT Testing Needs,15,32,48,68,82,72
+Blockchain Testing,2,8,18,35,52,65
+Microservices Testing,28,52,72,85,92,80

@@ -1,0 +1,11 @@
+Industry,QA_Budget_Percent_2020,QA_Budget_Percent_2025,Projected_Budget_2030_Percent,Automation_Adoption_Percent,AI_Testing_Adoption_Percent,Primary_Testing_Focus
+BFSI (Banking & Finance),12,15,18,78,58,"Security, Compliance, Performance"
+Healthcare & Life Sciences,10,13,16,68,48,"Regulatory, Data Privacy, Reliability"
+IT & Telecommunications,15,18,22,88,72,"Performance, Scalability, API Testing"
+Retail & E-Commerce,11,14,17,82,62,"User Experience, Mobile, Load Testing"
+Manufacturing,9,12,15,72,42,"IoT, Embedded Systems, Safety"
+Media & Entertainment,10,13,16,75,55,"User Experience, Streaming, Content"
+Government & Public Sector,8,10,13,58,35,"Security, Accessibility, Compliance"
+Automotive,11,14,17,85,68,"Embedded, Safety-Critical, Real-time"
+Energy & Utilities,9,11,14,68,45,"SCADA, Safety, Reliability"
+Education,7,9,11,62,38,"Accessibility, User Experience, Mobile"

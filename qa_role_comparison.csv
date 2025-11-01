@@ -1,0 +1,7 @@
+Role,Primary_Focus,Coding_Required_Percent,Avg_Experience_Years,Job_Growth_2020_2025_Percent,Job_Growth_2025_2030_Percent,Automation_Skills_Importance,Domain_Knowledge_Importance,Avg_Salary_2025_USD,Projected_Salary_2030_USD
+Manual Tester,"Exploratory testing, user acceptance testing, UI/UX validation",20,2,-17,-17,30,85,61800,68500
+Automation Engineer,"Test script development, framework design, CI/CD integration",85,3,50,50,95,65,95200,115200
+SDET,"Full-stack development + testing, API testing, infrastructure testing",95,4,110,151,98,75,110400,135400
+AI QA Specialist,"AI/ML model testing, bias detection, prompt testing, hallucination detection",90,3,460,465,92,88,109000,134500
+Data QA Engineer,"Data quality validation, ETL testing, data pipeline testing",88,3,514,240,85,92,100700,124700
+Agile Testing Specialist,"Sprint testing, continuous testing, cross-functional collaboration",70,3,215,212,82,88,88000,108000
