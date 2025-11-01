@@ -679,6 +679,8 @@ function initCursor() {
     const { clientX, clientY } = event;
     dot.style.transform = `translate3d(${clientX}px, ${clientY}px, 0)`;
     ring.style.transform = `translate3d(${clientX}px, ${clientY}px, 0)`;
+    dot.classList.add("visible");
+    ring.classList.add("visible");
 
     ring.classList.add("active");
     clearTimeout(ringTimeout);

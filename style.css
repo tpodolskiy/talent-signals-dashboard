@@ -553,6 +553,8 @@ canvas {
     border-radius: 50%;
     background: white;
     transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity var(--transition-base);
   }
 
   .cursor-ring {
@@ -561,7 +563,13 @@ canvas {
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.45);
     transform: translate(-50%, -50%);
+    opacity: 0;
     transition: transform var(--transition-base), opacity var(--transition-base);
+  }
+
+  .cursor-dot.visible,
+  .cursor-ring.visible {
+    opacity: 1;
   }
 
   .cursor-ring.active {
