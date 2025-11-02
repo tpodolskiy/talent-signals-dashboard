@@ -4,7 +4,8 @@ import { generateChatbotResponse } from "./chatbot-responses.js";
 const chatbotState = {
   open: false,
   sendMessage: null,
-  input: null
+  input: null,
+  ensureOpen: null
 };
 
 export function initChatbot() {
@@ -13,21 +14,71 @@ export function initChatbot() {
   const input = document.getElementById("chatbot-input");
   const send = document.getElementById("chatbot-send");
   const history = document.getElementById("chatbot-history");
+  const closeButton = panel?.querySelector("[data-chatbot-close]");
+  const resizeButton = panel?.querySelector("[data-chatbot-resize]");
 
   if (!toggle || !panel || !input || !send || !history) return;
 
   chatbotState.input = input;
 
-  toggle.addEventListener("click", () => {
-    chatbotState.open = !chatbotState.open;
-    panel.classList.toggle("open", chatbotState.open);
-    toggle.setAttribute("aria-expanded", chatbotState.open.toString());
-    if (chatbotState.open) {
-      setTimeout(() => input.focus(), 80);
+  const setOpen = (isOpen) => {
+    if (chatbotState.open === isOpen) return;
+    chatbotState.open = isOpen;
+    panel.classList.toggle("open", isOpen);
+    panel.setAttribute("aria-hidden", (!isOpen).toString());
+    toggle.setAttribute("aria-expanded", isOpen.toString());
+    document.body.classList.toggle("chatbot-open", isOpen);
+    if (isOpen) {
+      setTimeout(() => input.focus(), 100);
+    }
+  };
+
+  const toggleOpen = () => {
+    setOpen(!chatbotState.open);
+  };
+
+  chatbotState.ensureOpen = () => setOpen(true);
+
+  panel.classList.remove("open");
+  panel.setAttribute("aria-hidden", "true");
+  toggle.setAttribute("aria-expanded", "false");
+
+  const updateResizeButton = () => {
+    if (!resizeButton) return;
+    const expanded = panel.classList.contains("expanded");
+    resizeButton.textContent = expanded ? "⇲" : "⇱";
+    resizeButton.setAttribute(
+      "aria-label",
+      expanded ? "Reduce panel size" : "Expand panel size"
+    );
+    resizeButton.setAttribute("aria-pressed", expanded.toString());
+  };
+
+  toggle.addEventListener("click", toggleOpen);
+
+  if (closeButton) {
+    closeButton.addEventListener("click", () => {
+      setOpen(false);
+    });
+  }
+
+  if (resizeButton) {
+    resizeButton.addEventListener("click", () => {
+      panel.classList.toggle("expanded");
+      updateResizeButton();
+    });
+    updateResizeButton();
+  }
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && chatbotState.open) {
+      event.preventDefault();
+      setOpen(false);
     }
   });
 
   const handleSend = async (messageOverride) => {
+    chatbotState.ensureOpen?.();
     const rawInput = typeof messageOverride === "string" ? messageOverride : input.value;
     const message = (rawInput || "").trim();
     if (!message) return;
@@ -72,8 +123,10 @@ export function initChips() {
     chip.addEventListener("click", () => {
       const question = chip.dataset.question || chip.textContent || "";
       if (typeof chatbotState.sendMessage === "function") {
+        chatbotState.ensureOpen?.();
         chatbotState.sendMessage(question);
       } else if (chatbotState.input) {
+        chatbotState.ensureOpen?.();
         chatbotState.input.value = question;
         chatbotState.input.focus();
       }

@@ -30,14 +30,7 @@
           <a href="/talent-signals-dashboard/">Overview</a>
           <a href="/talent-signals-dashboard/roles/">Roles & Skills</a>
           <a href="/talent-signals-dashboard/insights/" aria-current="page">Forecast & Strategy</a>
-          <a href="mailto:info@talentsignals.ai">Contact</a>
-          <a
-            class="cta-button"
-            href="https://www.linkedin.com/in/taraspodolskiy/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >LinkedIn</a
-          >
+          <button class="link-button" type="button" data-contact-trigger>Contact</button>
         </div>
       </nav>
       <div class="nav-backdrop" data-nav-backdrop></div>
@@ -75,7 +68,7 @@
           <h2>Budget composition</h2>
           <p>Engineering & product investment mix (2016 – 2035)</p>
         </div>
-        <div class="chart-wrapper">
+        <div class="chart-wrapper" data-chart-id="investmentChart">
           <canvas id="investmentChart"></canvas>
         </div>
       </section>
@@ -86,7 +79,7 @@
           <p>Talent hub expansion index</p>
         </div>
         <div class="layout-split">
-          <div class="chart-wrapper">
+          <div class="chart-wrapper" data-chart-id="regionalChart">
             <canvas id="regionalChart"></canvas>
           </div>
           <ul class="insight-list">
@@ -111,30 +104,105 @@
           <h2>Scenario planning</h2>
           <p>Hiring velocity under varied macro assumptions</p>
         </div>
-        <div class="chart-wrapper">
+        <div class="chart-wrapper" data-chart-id="scenarioChart">
           <canvas id="scenarioChart"></canvas>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <span>© <span id="year"></span> TalentSignals. Built for strategic operators.</span>
-      <a
-        class="link-inline"
-        href="https://www.linkedin.com/in/taraspodolskiy/"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Connect on LinkedIn</a
-      >
+      <div class="footer-meta">
+        <span>© <span id="year"></span> TalentSignals. Built for strategic operators.</span>
+      </div>
+      <div class="footer-links">
+        <a
+          class="link-inline"
+          href="https://www.linkedin.com/in/taraspodolskiy/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn</a
+        >
+        <a class="link-inline" href="https://t.me/a_sho_take22" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a class="link-inline" href="mailto:info@talentsignals.ai">Email</a>
+      </div>
     </footer>
 
-    <button class="chatbot-toggle" aria-controls="chatbot-panel" aria-expanded="false">
-      ✦
+    <div
+      class="contact-modal"
+      id="contact-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="contact-title"
+      aria-hidden="true"
+    >
+      <div class="contact-modal__backdrop" data-contact-close></div>
+      <div class="contact-modal__dialog">
+        <button
+          class="contact-modal__close"
+          type="button"
+          aria-label="Close contact options"
+          data-contact-close
+        >
+          ×
+        </button>
+        <div class="contact-modal__content">
+          <h3 id="contact-title">Where should we connect?</h3>
+          <p>Select your preferred channel and we’ll direct you instantly.</p>
+          <div class="contact-modal__channels">
+            <a class="contact-action" href="mailto:info@talentsignals.ai">
+              <span class="contact-action__label">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M3 7.5 11.4 13a1 1 0 0 0 1.2 0L21 7.5m-16.5 9h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 17.5 4h-13A1.5 1.5 0 0 0 3 5.5v9A1.5 1.5 0 0 0 4.5 16.5Z" />
+                </svg>
+                <span>Email</span>
+              </span>
+              <span class="contact-action__meta">info@talentsignals.ai</span>
+            </a>
+            <a class="contact-action" href="https://t.me/a_sho_take22" target="_blank" rel="noopener noreferrer">
+              <span class="contact-action__label">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M21.47 3.1a1.16 1.16 0 0 0-1.12-.15L2.52 10.03c-.78.29-.84 1.35-.1 1.73l4.78 2.43 2.09 5.33a1.1 1.1 0 0 0 1.8.33l2.62-2.57 4.55 3.14a1.14 1.14 0 0 0 1.77-.67l3.02-14.2a1.16 1.16 0 0 0-.58-1.26Zm-6.37 5.3-5.1 5.01a1.04 1.04 0 0 0-.27.47l-.63 2.29-1-2.54 6.35-5.23a.5.5 0 0 1 .7.75Z" />
+                </svg>
+                <span>Telegram</span>
+              </span>
+              <span class="contact-action__meta">@a_sho_take22</span>
+            </a>
+            <a
+              class="contact-action"
+              href="https://www.linkedin.com/in/taraspodolskiy/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="contact-action__label">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M4.98 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8.75h3.96V21H3V8.75Zm6.5 0h3.8v1.68h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.08V21h-3.96v-6.25c0-1.49-.03-3.4-2.07-3.4-2.08 0-2.4 1.62-2.4 3.29V21H9.5V8.75Z" />
+                </svg>
+                <span>LinkedIn</span>
+              </span>
+              <span class="contact-action__meta">/taraspodolskiy</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="chatbot-toggle" aria-controls="chatbot-panel" aria-expanded="false" aria-label="Open Trend Copilot">
+      <span class="chatbot-toggle__icon">✦</span>
+      <span class="chatbot-toggle__label">Trend Copilot</span>
     </button>
-    <div class="chatbot-panel" id="chatbot-panel">
-      <div>
-        <h3>Trend Copilot</h3>
-        <p class="badge">Discuss budget, regions, or scenario trade-offs.</p>
+    <div class="chatbot-panel" id="chatbot-panel" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="chatbot-panel__header">
+        <div>
+          <h3>Trend Copilot</h3>
+          <p class="badge">Discuss budget, regions, or scenario trade-offs.</p>
+        </div>
+        <div class="chatbot-panel__actions">
+          <button class="chatbot-resize" type="button" aria-label="Toggle panel size" data-chatbot-resize>⇱</button>
+          <button class="chatbot-close" type="button" aria-label="Close Trend Copilot" data-chatbot-close>×</button>
+        </div>
       </div>
       <div class="chips">
         <span class="chip" data-question="How should I allocate AI budget next year?">AI budget</span>

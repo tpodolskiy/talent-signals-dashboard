@@ -2,6 +2,7 @@ import { configureChartTheme, initCharts } from "./modules/charts.js";
 import { initChatbot, initChips } from "./modules/chatbot.js";
 import { initCursor } from "./modules/cursor.js";
 import { initNavigation } from "./modules/navigation.js";
+import { initContactModal } from "./modules/contact-modal.js";
 import { setCurrentYear } from "./modules/layout.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,4 +13,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initChips();
   initCursor();
   initNavigation();
+  initContactModal();
 });

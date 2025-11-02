@@ -28,8 +28,8 @@ export function initCursor() {
   let currentY = targetY;
 
   const render = () => {
-    currentX += (targetX - currentX) * 0.35;
-    currentY += (targetY - currentY) * 0.35;
+    currentX += (targetX - currentX) * 0.6;
+    currentY += (targetY - currentY) * 0.6;
     cursor.style.setProperty("--cursor-x", currentX.toFixed(2));
     cursor.style.setProperty("--cursor-y", currentY.toFixed(2));
     requestAnimationFrame(render);

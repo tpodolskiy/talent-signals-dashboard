@@ -9,18 +9,18 @@ export function configureChartTheme() {
   Chart.defaults.font.family =
     '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
   Chart.defaults.font.size = 12;
-  Chart.defaults.plugins.legend.labels.color = "rgba(226, 232, 240, 0.72)";
-  Chart.defaults.plugins.tooltip.backgroundColor = "rgba(15, 23, 42, 0.92)";
-  Chart.defaults.plugins.tooltip.borderColor = "rgba(148, 163, 184, 0.35)";
-  Chart.defaults.plugins.tooltip.borderWidth = 1;
-  Chart.defaults.plugins.tooltip.titleColor = "#f8fafc";
-  Chart.defaults.plugins.tooltip.bodyColor = "rgba(226, 232, 240, 0.9)";
-  Chart.defaults.plugins.tooltip.cornerRadius = 10;
-  Chart.defaults.plugins.tooltip.padding = 12;
   Chart.defaults.elements.point.radius = 0;
   Chart.defaults.elements.point.hoverRadius = 5;
   Chart.defaults.elements.point.backgroundColor = "#f8fafc";
   Chart.defaults.elements.point.borderWidth = 0;
+  Chart.defaults.plugins.legend.display = false;
+  Chart.defaults.plugins.tooltip.backgroundColor = "rgba(15, 23, 42, 0.92)";
+  Chart.defaults.plugins.tooltip.borderColor = "rgba(148, 163, 184, 0.35)";
+  Chart.defaults.plugins.tooltip.borderWidth = 1;
+  Chart.defaults.plugins.tooltip.cornerRadius = 10;
+  Chart.defaults.plugins.tooltip.padding = 12;
+  Chart.defaults.plugins.tooltip.titleColor = "#f8fafc";
+  Chart.defaults.plugins.tooltip.bodyColor = "rgba(226, 232, 240, 0.9)";
   Chart.defaults.transitions.active.animation.duration = 280;
 }
 
@@ -29,41 +29,27 @@ export function initCharts() {
 
   destroyCharts();
 
-  const marketCanvas = document.getElementById("marketPulseChart");
-  if (marketCanvas) registerChart("market", createMarketPulseChart(marketCanvas.getContext("2d")));
+  const chartDefinitions = [
+    { id: "marketPulseChart", key: "market", create: createMarketPulseChart },
+    { id: "talentAllocationChart", key: "allocation", create: createTalentAllocationChart },
+    { id: "roleGrowthChart", key: "roleGrowth", create: createRoleGrowthChart },
+    { id: "compensationChart", key: "compensation", create: createCompensationChart },
+    { id: "skillMatrixChart", key: "skillMatrix", create: createSkillMatrixChart },
+    { id: "investmentChart", key: "investment", create: createInvestmentChart },
+    { id: "regionalChart", key: "regional", create: createRegionalChart },
+    { id: "scenarioChart", key: "scenario", create: createScenarioChart }
+  ];
 
-  const allocationCanvas = document.getElementById("talentAllocationChart");
-  if (allocationCanvas)
-    registerChart("allocation", createTalentAllocationChart(allocationCanvas.getContext("2d")));
-
-  const roleGrowthCanvas = document.getElementById("roleGrowthChart");
-  if (roleGrowthCanvas)
-    registerChart("roleGrowth", createRoleGrowthChart(roleGrowthCanvas.getContext("2d")));
-
-  const compensationCanvas = document.getElementById("compensationChart");
-  if (compensationCanvas)
-    registerChart("compensation", createCompensationChart(compensationCanvas.getContext("2d")));
-
-  const skillCanvas = document.getElementById("skillMatrixChart");
-  if (skillCanvas)
-    registerChart("skillMatrix", createSkillMatrixChart(skillCanvas.getContext("2d")));
-
-  const investmentCanvas = document.getElementById("investmentChart");
-  if (investmentCanvas)
-    registerChart("investment", createInvestmentChart(investmentCanvas.getContext("2d")));
-
-  const regionalCanvas = document.getElementById("regionalChart");
-  if (regionalCanvas)
-    registerChart("regional", createRegionalChart(regionalCanvas.getContext("2d")));
-
-  const scenarioCanvas = document.getElementById("scenarioChart");
-  if (scenarioCanvas)
-    registerChart("scenario", createScenarioChart(scenarioCanvas.getContext("2d")));
+  chartDefinitions.forEach(({ id, key, create }) => {
+    const canvas = document.getElementById(id);
+    if (!canvas) return;
+    const chart = create(canvas);
+    if (chart) registerChart(key, chart);
+  });
 }
 
-function registerChart(key, instance) {
-  if (!instance) return;
-  chartRegistry.set(key, instance);
+function registerChart(key, chart) {
+  chartRegistry.set(key, chart);
 }
 
 function destroyCharts() {
@@ -71,7 +57,8 @@ function destroyCharts() {
   chartRegistry.clear();
 }
 
-function createMarketPulseChart(ctx) {
+function createMarketPulseChart(canvas) {
+  const ctx = canvas.getContext("2d");
   const gradientTotal = createGradient(ctx, [
     { stop: 0, color: "rgba(96, 165, 250, 0.6)" },
     { stop: 1, color: "rgba(96, 165, 250, 0.08)" }
@@ -85,7 +72,7 @@ function createMarketPulseChart(ctx) {
     { stop: 1, color: "rgba(94, 234, 212, 0.05)" }
   ]);
 
-  return new Chart(ctx, {
+  const chart = new Chart(ctx, {
     type: "line",
     data: {
       labels: trendData.marketSpend.years,
@@ -122,6 +109,7 @@ function createMarketPulseChart(ctx) {
     },
     options: {
       maintainAspectRatio: false,
+      layout: { padding: { top: 12, right: 12, bottom: 8, left: 8 } },
       scales: {
         x: {
           grid: { color: "rgba(148, 163, 184, 0.08)" },
@@ -130,22 +118,25 @@ function createMarketPulseChart(ctx) {
         y: {
           beginAtZero: true,
           grid: { color: "rgba(148, 163, 184, 0.08)" },
-          ticks: {
-            callback: (value) => `$${value}`
-          }
+          ticks: { callback: (value) => `$${value}` }
         }
       }
     }
   });
+
+  attachDatasetControls(canvas, chart);
+  return chart;
 }
 
-function createTalentAllocationChart(ctx) {
-  return new Chart(ctx, {
+function createTalentAllocationChart(canvas) {
+  const ctx = canvas.getContext("2d");
+  const chart = new Chart(ctx, {
     type: "doughnut",
     data: {
       labels: trendData.talentAllocation2030.labels,
       datasets: [
         {
+          label: "Allocation",
           data: trendData.talentAllocation2030.values,
           backgroundColor: [
             palette.primary,
@@ -162,18 +153,18 @@ function createTalentAllocationChart(ctx) {
       ]
     },
     options: {
+      maintainAspectRatio: false,
       cutout: "55%",
-      plugins: {
-        legend: {
-          position: "right",
-          labels: { usePointStyle: true }
-        }
-      }
+      layout: { padding: { top: 12, bottom: 8 } }
     }
   });
+
+  attachDatasetControls(canvas, chart);
+  return chart;
 }
 
-function createRoleGrowthChart(ctx) {
+function createRoleGrowthChart(canvas) {
+  const ctx = canvas.getContext("2d");
   const datasets = Object.entries(trendData.roleGrowth.tracks).map(
     ([label, values], index) => ({
       label,
@@ -185,26 +176,25 @@ function createRoleGrowthChart(ctx) {
     })
   );
 
-  return new Chart(ctx, {
+  const chart = new Chart(ctx, {
     type: "line",
     data: { labels: trendData.roleGrowth.years, datasets },
     options: {
       maintainAspectRatio: false,
+      layout: { padding: { top: 12, right: 12, left: 8, bottom: 8 } },
       scales: {
-        x: {
-          grid: { display: false },
-          ticks: { maxTicksLimit: 8 }
-        },
-        y: {
-          beginAtZero: false,
-          grid: { color: "rgba(148, 163, 184, 0.08)" }
-        }
+        x: { grid: { display: false }, ticks: { maxTicksLimit: 8 } },
+        y: { beginAtZero: false, grid: { color: "rgba(148, 163, 184, 0.08)" } }
       }
     }
   });
+
+  attachDatasetControls(canvas, chart);
+  return chart;
 }
 
-function createCompensationChart(ctx) {
+function createCompensationChart(canvas) {
+  const ctx = canvas.getContext("2d");
   const datasets = Object.entries(trendData.compensation.bands).map(
     ([label, values], index) => ({
       label,
@@ -218,27 +208,30 @@ function createCompensationChart(ctx) {
     })
   );
 
-  return new Chart(ctx, {
+  const chart = new Chart(ctx, {
     type: "line",
     data: { labels: trendData.compensation.years, datasets },
     options: {
       maintainAspectRatio: false,
+      layout: { padding: { top: 12, right: 12, left: 8, bottom: 8 } },
       scales: {
         y: {
           beginAtZero: false,
           grid: { color: "rgba(148, 163, 184, 0.08)" },
-          ticks: {
-            callback: (value) => `$${value}k`
-          }
+          ticks: { callback: (value) => `$${value}k` }
         },
         x: { grid: { display: false } }
       }
     }
   });
+
+  attachDatasetControls(canvas, chart);
+  return chart;
 }
 
-function createSkillMatrixChart(ctx) {
-  return new Chart(ctx, {
+function createSkillMatrixChart(canvas) {
+  const ctx = canvas.getContext("2d");
+  const chart = new Chart(ctx, {
     type: "radar",
     data: {
       labels: trendData.skillMatrix2025.labels,
@@ -255,6 +248,8 @@ function createSkillMatrixChart(ctx) {
       ]
     },
     options: {
+      maintainAspectRatio: false,
+      layout: { padding: { top: 12, right: 12, left: 12, bottom: 12 } },
       scales: {
         r: {
           angleLines: { color: "rgba(148, 163, 184, 0.12)" },
@@ -266,9 +261,13 @@ function createSkillMatrixChart(ctx) {
       }
     }
   });
+
+  attachDatasetControls(canvas, chart);
+  return chart;
 }
 
-function createInvestmentChart(ctx) {
+function createInvestmentChart(canvas) {
+  const ctx = canvas.getContext("2d");
   const datasets = Object.entries(trendData.investment.streams).map(
     ([label, values], index) => ({
       label,
@@ -286,17 +285,15 @@ function createInvestmentChart(ctx) {
     })
   );
 
-  return new Chart(ctx, {
+  const chart = new Chart(ctx, {
     type: "line",
     data: { labels: trendData.investment.years, datasets },
     options: {
       maintainAspectRatio: false,
       stacked: true,
+      layout: { padding: { top: 12, right: 12, bottom: 10, left: 8 } },
       scales: {
-        x: {
-          grid: { color: "rgba(148, 163, 184, 0.06)" },
-          ticks: { maxTicksLimit: 8 }
-        },
+        x: { grid: { color: "rgba(148, 163, 184, 0.06)" }, ticks: { maxTicksLimit: 8 } },
         y: {
           beginAtZero: true,
           stacked: true,
@@ -306,10 +303,14 @@ function createInvestmentChart(ctx) {
       }
     }
   });
+
+  attachDatasetControls(canvas, chart);
+  return chart;
 }
 
-function createRegionalChart(ctx) {
-  return new Chart(ctx, {
+function createRegionalChart(canvas) {
+  const ctx = canvas.getContext("2d");
+  const chart = new Chart(ctx, {
     type: "bar",
     data: {
       labels: trendData.regionalMomentum.regions,
@@ -333,22 +334,21 @@ function createRegionalChart(ctx) {
     },
     options: {
       maintainAspectRatio: false,
-      responsive: true,
+      layout: { padding: { top: 12, right: 12, bottom: 8, left: 8 } },
       scales: {
-        x: {
-          grid: { display: false }
-        },
-        y: {
-          beginAtZero: true,
-          grid: { color: "rgba(148, 163, 184, 0.08)" }
-        }
+        x: { grid: { display: false } },
+        y: { beginAtZero: true, grid: { color: "rgba(148, 163, 184, 0.08)" } }
       }
     }
   });
+
+  attachDatasetControls(canvas, chart);
+  return chart;
 }
 
-function createScenarioChart(ctx) {
-  return new Chart(ctx, {
+function createScenarioChart(canvas) {
+  const ctx = canvas.getContext("2d");
+  const chart = new Chart(ctx, {
     type: "line",
     data: {
       labels: trendData.hiringScenarios.years,
@@ -383,23 +383,128 @@ function createScenarioChart(ctx) {
     },
     options: {
       maintainAspectRatio: false,
+      layout: { padding: { top: 12, right: 12, bottom: 8, left: 8 } },
       scales: {
-        x: {
-          grid: { display: false }
-        },
-        y: {
-          beginAtZero: false,
-          grid: { color: "rgba(148, 163, 184, 0.08)" }
-        }
+        x: { grid: { display: false } },
+        y: { beginAtZero: false, grid: { color: "rgba(148, 163, 184, 0.08)" } }
       }
     }
   });
+
+  attachDatasetControls(canvas, chart);
+  return chart;
+}
+
+function attachDatasetControls(canvas, chart) {
+  const wrapper = canvas.closest(".chart-wrapper");
+  if (!wrapper) return;
+
+  let toolbar = wrapper.querySelector(".chart-toolbar");
+  if (!toolbar) {
+    toolbar = document.createElement("div");
+    toolbar.className = "chart-toolbar";
+    wrapper.insertBefore(toolbar, canvas);
+  } else {
+    toolbar.innerHTML = "";
+  }
+
+  const label = document.createElement("span");
+  label.className = "chart-toolbar__label";
+  label.textContent = "Series visibility";
+  toolbar.appendChild(label);
+
+  const masterToggle = buildToggle(`${canvas.id}-toggle-all`, "All series");
+  toolbar.appendChild(masterToggle.label);
+
+  const datasetContainer = document.createElement("div");
+  datasetContainer.className = "chart-toolbar__group";
+  toolbar.appendChild(datasetContainer);
+
+  const datasetCheckboxes = chart.data.datasets.map((dataset, index) => {
+    const control = buildToggle(
+      `${canvas.id}-dataset-${index}`,
+      dataset.label || `Series ${index + 1}`,
+      getDatasetColor(dataset)
+    );
+    control.checkbox.checked = isDatasetVisible(chart, index);
+    control.checkbox.addEventListener("change", () => {
+      setDatasetVisibility(chart, index, control.checkbox.checked);
+      chart.update();
+      syncMasterState();
+    });
+    datasetContainer.appendChild(control.label);
+    return control.checkbox;
+  });
+
+  const syncMasterState = () => {
+    if (!datasetCheckboxes.length) {
+      masterToggle.checkbox.checked = true;
+      masterToggle.checkbox.indeterminate = false;
+      return;
+    }
+    const allVisible = datasetCheckboxes.every((input) => input.checked);
+    const noneVisible = datasetCheckboxes.every((input) => !input.checked);
+    masterToggle.checkbox.checked = allVisible;
+    masterToggle.checkbox.indeterminate = !allVisible && !noneVisible;
+  };
+
+  masterToggle.checkbox.addEventListener("change", () => {
+    const shouldShow = masterToggle.checkbox.checked;
+    datasetCheckboxes.forEach((checkbox, index) => {
+      checkbox.checked = shouldShow;
+      setDatasetVisibility(chart, index, shouldShow);
+    });
+    masterToggle.checkbox.indeterminate = false;
+    chart.update();
+  });
+
+  syncMasterState();
+}
+
+function buildToggle(id, text, color) {
+  const label = document.createElement("label");
+  label.className = "chart-toggle";
+  if (color) label.style.setProperty("--toggle-color", color);
+
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.id = id;
+  label.appendChild(checkbox);
+
+  const span = document.createElement("span");
+  span.textContent = text;
+  label.appendChild(span);
+
+  return { label, checkbox };
+}
+
+function getDatasetColor(dataset) {
+  if (Array.isArray(dataset.borderColor)) return dataset.borderColor[0];
+  if (typeof dataset.borderColor === "string") return dataset.borderColor;
+  if (Array.isArray(dataset.backgroundColor)) return dataset.backgroundColor[0];
+  if (typeof dataset.backgroundColor === "string") return dataset.backgroundColor;
+  return palette.primary;
+}
+
+function isDatasetVisible(chart, index) {
+  if (typeof chart.isDatasetVisible === "function") {
+    return chart.isDatasetVisible(index);
+  }
+  const meta = chart.getDatasetMeta(index);
+  return meta?.hidden !== true;
+}
+
+function setDatasetVisibility(chart, index, visible) {
+  if (typeof chart.setDatasetVisibility === "function") {
+    chart.setDatasetVisibility(index, visible);
+  } else {
+    const meta = chart.getDatasetMeta(index);
+    if (meta) meta.hidden = !visible;
+  }
 }
 
 function createGradient(ctx, stops) {
   const gradient = ctx.createLinearGradient(0, 0, 0, ctx.canvas.height);
-  stops.forEach(({ stop, color }) => {
-    gradient.addColorStop(stop, color);
-  });
+  stops.forEach(({ stop, color }) => gradient.addColorStop(stop, color));
   return gradient;
 }

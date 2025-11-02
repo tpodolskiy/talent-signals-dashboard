@@ -33,7 +33,9 @@ export function initNavigation() {
   toggle.addEventListener("click", toggleNav);
   backdrop.addEventListener("click", closeNav);
 
-  links.querySelectorAll("a").forEach((anchor) => {
+  const interactiveItems = links.querySelectorAll("a, [data-contact-trigger]");
+
+  interactiveItems.forEach((anchor) => {
     anchor.addEventListener("click", () => {
       if (window.innerWidth <= MOBILE_BREAKPOINT) closeNav();
     });
