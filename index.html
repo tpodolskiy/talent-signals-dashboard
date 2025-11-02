@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 
@@ -16,7 +16,13 @@
     <header class="glass-header">
       <nav class="nav">
         <div class="brand">TalentSignals</div>
-        <div class="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+          aria-controls="primary-navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links" data-nav-links id="primary-navigation">
           <a href="/talent-signals-dashboard/" aria-current="page">Overview</a>
           <a href="/talent-signals-dashboard/roles/">Roles & Skills</a>
           <a href="/talent-signals-dashboard/insights/">Forecast & Strategy</a>
@@ -25,6 +31,7 @@
             rel="noopener noreferrer">LinkedIn</a>
         </div>
       </nav>
+      <div class="nav-backdrop" data-nav-backdrop></div>
     </header>
 
     <main>
@@ -161,7 +168,7 @@
       </div>
     </div>
 
-    <script src="app.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
   </body>
 
 </html>
