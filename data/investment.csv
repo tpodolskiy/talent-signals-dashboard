@@ -1,0 +1,28 @@
+Topic,Year,Metric,Value,Unit,Region/Role,Source
+Investment,2024,Average monthly AI spend,62964,USD,Global,web:15
+Investment,2025,Average monthly AI spend (projected),85521,USD,Global,web:15
+Investment,2025,Increase in AI spend,36,percent,Global,web:15
+Investment,2025,Organizations spending 100k+ monthly on AI,45,percent,Global,web:15
+Investment,2024,Organizations spending 100k+ monthly on AI,20,percent,Global,web:15
+Investment,2025,AI budget allocation - public cloud platforms,11,percent,Global,web:15
+Investment,2025,AI budget allocation - generative AI tools,10,percent,Global,web:15
+Investment,2025,AI budget allocation - security platforms,9,percent,Global,web:15
+Investment,2025,Organizations prioritizing AI explainability,44,percent,Global,web:15
+Investment,2025,Organizations prioritizing AI security/robustness,41,percent,Global,web:15
+Investment,2025,Organizations prioritizing cloud/computing resources,39,percent,Global,web:15
+Investment,2025,Organizations prioritizing customer experience,39,percent,Global,web:15
+Investment,2025,AI allocation of digital budget,36,percent,Global,web:18
+Investment,2025,Digital budget (avg company 13B revenue),1.8,billion USD,Global,web:18
+Investment,2025,AI portion of digital budget (equiv),700,million USD,Global,web:18
+Investment,2025,Organizations investing in AI/GenAI,74,percent,Global,web:18
+Investment,2025,Organizations investing in data management,55,percent,Global,web:18
+Investment,2025,Organizations investing in cloud platforms,47,percent,Global,web:18
+Investment,2025,Organizations investing in identity management,25,percent,Global,web:18
+Investment,2024,Global datacenter spending (systems software services),692.1,billion USD,Global,web:26
+Investment,2025,Global datacenter spending (projected),1090,billion USD,Global,web:26
+Investment,2026,Global datacenter spending (projected),1490,billion USD,Global,web:26
+Investment,2024,AI share of datacenter spending,22.6,percent,Global,web:26
+Investment,2025,AI share of datacenter spending (projected),32.1,percent,Global,web:26
+Investment,2024,AI share of IT revenues,19.6,percent,Global,web:26
+Investment,2025,AI share of IT revenues (projected),27.2,percent,Global,web:26
+Investment,2026,AI share of IT revenues (projected),34.1,percent,Global,web:26

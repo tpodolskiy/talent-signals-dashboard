@@ -5,130 +5,19 @@ export const palette = {
   magenta: "#f472b6",
   teal: "#5eead4",
   amber: "#fbbf24",
-  slate: "#64748b"
+  slate: "#64748b",
+  lime: "#bef264"
 };
 
-export const trendData = {
-  marketSpend: {
-    years: [
-      2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025,
-      2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035
-    ],
-    total: [
-      180, 194, 210, 228, 250, 276, 305, 338, 374, 412,
-      456, 502, 551, 603, 658, 716, 777, 842, 910, 982
-    ],
-    aiAutomation: [
-      18, 22, 27, 33, 41, 50, 62, 78, 96, 118,
-      143, 172, 205, 242, 284, 331, 384, 442, 506, 577
-    ],
-    productOps: [
-      42, 45, 48, 52, 57, 63, 70, 78, 87, 97,
-      108, 120, 133, 147, 162, 178, 195, 213, 232, 252
-    ]
-  },
-  talentAllocation2030: {
-    labels: [
-      "Backend Engineering",
-      "Frontend & Mobile",
-      "Platform & DevOps",
-      "QA & Reliability",
-      "Data & AI",
-      "Product & Design"
-    ],
-    values: [22, 17, 16, 12, 18, 15]
-  },
-  roleGrowth: {
-    years: [
-      2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025,
-      2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035
-    ],
-    tracks: {
-      "Backend Engineering": [
-        180, 190, 202, 215, 228, 240, 260, 282, 308, 336,
-        360, 384, 410, 438, 470, 504, 540, 576, 612, 648
-      ],
-      "Frontend & Mobile": [
-        140, 150, 164, 178, 188, 204, 220, 240, 262, 284,
-        305, 322, 340, 358, 380, 405, 432, 458, 486, 512
-      ],
-      "Platform & DevOps": [
-        75, 82, 90, 102, 116, 134, 156, 182, 210, 244,
-        270, 296, 328, 360, 396, 432, 468, 504, 536, 568
-      ],
-      "QA & Reliability": [
-        160, 166, 170, 176, 184, 194, 208, 224, 240, 252,
-        266, 284, 304, 328, 356, 384, 408, 428, 446, 462
-      ],
-      "Data & AI": [
-        45, 50, 58, 68, 82, 102, 128, 160, 198, 240,
-        285, 330, 378, 430, 486, 548, 612, 676, 742, 812
-      ],
-      "Product Management": [
-        96, 102, 108, 118, 130, 146, 162, 182, 204, 228,
-        248, 266, 284, 302, 320, 340, 360, 382, 404, 428
-      ],
-      "Design & Research": [
-        82, 88, 96, 104, 114, 126, 142, 160, 180, 204,
-        226, 244, 262, 280, 300, 320, 342, 366, 390, 414
-      ]
-    }
-  },
-  compensation: {
-    years: [2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030],
-    bands: {
-      "Backend Engineering": [132, 138, 144, 152, 160, 168, 176, 184, 192, 200, 208],
-      "Platform & DevOps": [140, 146, 154, 162, 170, 180, 190, 200, 210, 220, 232],
-      "Data & AI": [146, 156, 168, 182, 198, 212, 226, 240, 256, 272, 288],
-      "Product Management": [134, 140, 148, 156, 168, 178, 188, 200, 210, 220, 232],
-      "Design & Research": [118, 124, 130, 138, 146, 154, 162, 170, 178, 186, 194]
-    }
-  },
-  skillMatrix2025: {
-    labels: [
-      "AI Fluency",
-      "Systems Thinking",
-      "Product Analytics",
-      "Automation",
-      "Design Ops",
-      "Reliability Engineering"
-    ],
-    values: [88, 92, 84, 90, 78, 86]
-  },
-  investment: {
-    years: [
-      2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025,
-      2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035
-    ],
-    streams: {
-      "Cloud & Platform": [
-        58, 62, 66, 70, 76, 84, 94, 106, 120, 134,
-        152, 168, 184, 202, 220, 240, 262, 286, 312, 338
-      ],
-      "AI / Automation": [
-        12, 16, 20, 26, 34, 44, 58, 76, 98, 124,
-        152, 182, 216, 254, 296, 342, 392, 446, 502, 562
-      ],
-      "Customer & Product": [
-        42, 44, 48, 52, 56, 60, 66, 72, 80, 88,
-        96, 104, 112, 122, 132, 142, 152, 164, 176, 188
-      ],
-      "Experience & Design": [
-        18, 20, 22, 24, 26, 30, 34, 38, 42, 46,
-        50, 54, 58, 62, 68, 74, 80, 86, 92, 98
-      ]
-    }
-  },
-  regionalMomentum: {
-    regions: ["North America", "Europe", "APAC", "LATAM", "Middle East & Africa"],
-    index2024: [100, 88, 92, 78, 66],
-    index2030: [128, 116, 132, 112, 98],
-    index2035: [148, 136, 156, 132, 118]
-  },
-  hiringScenarios: {
-    years: [2024, 2025, 2026, 2027, 2028, 2029, 2030],
-    base: [100, 108, 117, 127, 138, 150, 163],
-    accelerated: [100, 112, 126, 142, 160, 182, 205],
-    conservative: [100, 105, 111, 118, 126, 134, 142]
+let cachedData = null;
+
+export async function loadAnalyticsData() {
+  if (cachedData) return cachedData;
+  const dataUrl = new URL("../../data/analytics-data.json", import.meta.url);
+  const response = await fetch(dataUrl);
+  if (!response.ok) {
+    throw new Error("Failed to load analytics data");
   }
-};
+  cachedData = await response.json();
+  return cachedData;
+}

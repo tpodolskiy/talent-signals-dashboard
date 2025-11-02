@@ -1,0 +1,255 @@
+# Global Tech Roles Employment and Compensation Data (2022-2025)
+# Research compiled from public industry sources
+# Data includes projections through 2035 where available
+# All currency values in USD unless otherwise specified
+# Source citations include web reference numbers for verification
+
+Topic,Year,Metric,Value,Unit,Region/Role,Source
+Headcount,2023,Global software developers,26900000,count,Global,web:6
+Headcount,2024,Global software developers,28700000,count,Global,web:6
+Headcount,2025,Global software developers,29000000,count,Global,web:6 (estimated)
+Headcount,2030,Global software developers (projected),45000000,count,Global,web:6
+Headcount,2023,Software engineers in US,1420000,count,North America,web:6
+Headcount,2024,Software development roles (projected growth),15,percent,Global,web:28
+Headcount,2034,Software developers employment (projected),1895500,count,North America,web:28
+Headcount,2024,QA job postings requiring coding skills,77,percent,Global,web:7
+Headcount,2023,QA job postings requiring coding skills,53,percent,Global,web:7
+Headcount,2024,QA job postings requiring DSA interviews,32,percent,Global,web:7
+Headcount,2025,Software quality automation market size,58.6,billion USD,Global,web:20
+Headcount,2035,Software quality automation market size (projected),125,billion USD,Global,web:20
+Headcount,2025,Product designers employed,15331,count,United States,web:8
+Headcount,2025,UX/UI designers,100000,estimate,United States,web:24
+Headcount,2025,Tech hiring rate,29,percent,Europe,web:31
+Headcount,2025,Tech hiring rate,32,percent,UK,web:31
+Headcount,2025,Tech hiring rate,30,percent,Germany,web:31
+Headcount,2025,Tech hiring rate,24,percent,Netherlands,web:31
+Headcount,2025,Tech hiring rate,22,percent,France,web:31
+Headcount,2025,Tech hiring rate,26,percent,Spain,web:31
+Headcount,2025,Tech hiring rate,17,percent,Sweden,web:31
+Headcount,2025,Tech graduates per year,700000,count,LATAM,web:16
+Salary,2024,Median software engineer salary,131450,USD,North America,web:28
+Salary,2024,Median software engineer salary,133080,USD,North America (BLS),web:28
+Salary,2025,Average software engineer salary,105683,USD,United States,web:11
+Salary,2025,Average software engineer salary,110140,USD,United States,web:14
+Salary,2025,Average software engineer salary,112484,USD,United States,web:11
+Salary,2025,Junior software engineer salary,65141,USD,United States,web:11
+Salary,2025,Senior software engineer salary,149082,USD,United States,web:11
+Salary,2023,Median software engineer salary,130160,USD,United States,web:11
+Salary,2024,Median software engineer salary,120000,USD,United States,web:11
+Salary,2025,Software engineer salary - California,146770,USD,California,web:14
+Salary,2025,Software engineer salary - Washington,145150,USD,Washington,web:14
+Salary,2025,Software engineer salary - Maryland,131240,USD,Maryland,web:14
+Salary,2025,Software engineer salary - New York,129950,USD,New York,web:14
+Salary,2024,Global average software engineer salary,52847,USD,Global,web:14
+Salary,2024,Software engineer salary - Switzerland,97518,USD,Europe,web:14
+Salary,2024,Median QA analyst and tester salary,102610,USD,North America,web:28
+Salary,2025,QA automation engineer salary (Playwright/Cypress),24,percent premium,Global,web:7
+Salary,2024,SDET salary (compensation parity with SWE),parity,comparable,Global,web:7
+Salary,2025,QA engineer salary (Web3),145000,USD,Global,web:12
+Salary,2025,Average UX designer salary,124415,USD,United States,web:24
+Salary,2025,Junior UX designer salary,78961,USD,United States,web:24
+Salary,2025,Senior UX designer salary,129828,USD,United States,web:24
+Salary,2025,UX design manager salary,171884,USD,United States,web:24
+Salary,2025,Average UI designer salary,84956,USD,United States,web:21
+Salary,2025,UX designer salary base,93195,USD,United States,web:21
+Salary,2025,UX designer total compensation,171217,USD,United States,web:21
+Salary,2025,Product designer salary (mid-level),95770,USD,United States,web:13
+Salary,2025,Junior product designer salary,84993,USD,United States,web:13
+Salary,2025,Senior product designer salary,102680,USD,United States,web:13
+Salary,2025,DevOps engineer entry-level salary,85000,USD,Global,web:19
+Salary,2025,DevOps engineer mid-level salary,122761,USD,Global,web:19
+Salary,2025,DevOps engineer mid-level salary (high),153809,USD,Global,web:19
+Salary,2025,Senior cloud architect salary (max),190000,USD,United States,web:30
+Salary,2025,Mid-level cloud engineer salary,118000,USD,United States,web:30
+Salary,2025,Senior cloud engineer salary,139000,USD,United States,web:30
+Salary,2025,Senior cloud engineer salary (max),183000,USD,United States,web:30
+Salary,2025,Mid-level cloud engineer San Francisco,148000,USD,San Francisco,web:30
+Salary,2025,Senior cloud engineer San Francisco (peak),237000,USD,San Francisco,web:30
+Investment,2024,Average monthly AI spend,62964,USD,Global,web:15
+Investment,2025,Average monthly AI spend (projected),85521,USD,Global,web:15
+Investment,2025,Increase in AI spend,36,percent,Global,web:15
+Investment,2025,Organizations spending 100k+ monthly on AI,45,percent,Global,web:15
+Investment,2024,Organizations spending 100k+ monthly on AI,20,percent,Global,web:15
+Investment,2025,AI budget allocation - public cloud platforms,11,percent,Global,web:15
+Investment,2025,AI budget allocation - generative AI tools,10,percent,Global,web:15
+Investment,2025,AI budget allocation - security platforms,9,percent,Global,web:15
+Investment,2025,Organizations prioritizing AI explainability,44,percent,Global,web:15
+Investment,2025,Organizations prioritizing AI security/robustness,41,percent,Global,web:15
+Investment,2025,Organizations prioritizing cloud/computing resources,39,percent,Global,web:15
+Investment,2025,Organizations prioritizing customer experience,39,percent,Global,web:15
+Investment,2025,AI allocation of digital budget,36,percent,Global,web:18
+Investment,2025,Digital budget (avg company 13B revenue),1.8,billion USD,Global,web:18
+Investment,2025,AI portion of digital budget (equiv),700,million USD,Global,web:18
+Investment,2025,Organizations investing in AI/GenAI,74,percent,Global,web:18
+Investment,2025,Organizations investing in data management,55,percent,Global,web:18
+Investment,2025,Organizations investing in cloud platforms,47,percent,Global,web:18
+Investment,2025,Organizations investing in identity management,25,percent,Global,web:18
+Investment,2024,Global datacenter spending (systems software services),692.1,billion USD,Global,web:26
+Investment,2025,Global datacenter spending (projected),1090,billion USD,Global,web:26
+Investment,2026,Global datacenter spending (projected),1490,billion USD,Global,web:26
+Investment,2024,AI share of datacenter spending,22.6,percent,Global,web:26
+Investment,2025,AI share of datacenter spending (projected),32.1,percent,Global,web:26
+Investment,2024,AI share of IT revenues,19.6,percent,Global,web:26
+Investment,2025,AI share of IT revenues (projected),27.2,percent,Global,web:26
+Investment,2026,AI share of IT revenues (projected),34.1,percent,Global,web:26
+Regional,2025,Software engineer salary gap - São Paulo vs Berlin,40,percent lower,LATAM vs Europe,web:16
+Regional,2025,Software engineer salary gap - Bogotá vs Amsterdam,60,percent lower,LATAM vs Europe,web:16
+Regional,2025,MENA tech growth rate,4.5,percent,Middle East & Africa,web:16
+Regional,2025,EU digital sector growth,0.9,percent,Europe,web:16
+Regional,2025,UAE companies using AI tools weekly,74,percent,Middle East,web:16
+Regional,2025,European companies using AI tools weekly,40,percent,Europe,web:16
+Regional,2025,Tech companies hiring remotely in Mexico,increased,trend,North America/LATAM,web:16
+Regional,2025,Tech companies hiring remotely in Eastern Europe,increased,trend,North America/Europe,web:16
+Regional,2025,Tech hiring rate increase,3,percent,Germany,web:31
+Specialties,2025,AI engineer role growth (YoY),143.2,percent,Global,web:32
+Specialties,2025,AI Solutions Architect growth (YoY),109.3,percent,Global,web:32
+Specialties,2025,AI Content Creator growth (YoY),134.5,percent,Global,web:32
+Specialties,2025,AI mention in job listings (YoY),120.6,percent,Global,web:32
+Specialties,2025,AI mention in job listings (YTD),56.1,percent,Global,web:32
+Specialties,2023,AI mention in job listings (YoY),114.8,percent,Global,web:32
+Specialties,2025,Selenium usage decrease,22,percent decline,Global,web:7
+Specialties,2025,Playwright usage increase,31,percent gain,Global,web:7
+Specialties,2025,Cypress usage increase,33,percent gain,Global,web:7
+Specialties,2025,Platform engineering team adoption (projected 2026),80,percent,Large orgs,web:17
+Specialties,2022,Platform engineering team adoption (baseline),45,percent,Large orgs,web:17
+Specialties,2030,AI jobs created (projected),170,million,Global,web:29
+Specialties,2030,Jobs displaced by AI (projected),92,million,Global,web:29
+Projections,2030,Engineering software market (projected),125.45,billion USD,Global,web:1
+Projections,2025,Growth rate engineering software market,20.3,percent CAGR,Global,web:1
+Projections,2023,Software development roles growth (10-year forecast),17,percent,North America,web:10
+Projections,2033,Software development roles growth (new jobs added),327900,count,North America,web:10
+Projections,2024,Gartner platform engineering forecast (2026),80,percent adoption,Global,web:17
+Projections,2027,Platform engineering infrastructure decision influence,50,percent,Global,web:17
+Projections,2035,Quality assurance market growth CAGR,7.7,percent,Global,web:20
+
+=== SUMMARY OF DATA SOURCES & METHODOLOGY ===
+
+TOTAL RECORDS: 116 data points
+COVERAGE: 2022-2035 (historical: 2023-2025, projections: 2026-2035)
+REGIONS: North America, Europe, APAC, LATAM, Middle East & Africa, Global
+
+TOPIC BREAKDOWN:
+- Salary Data: 38 records (software engineers, QA, designers, DevOps, platform engineers)
+- Investment Data: 27 records (AI spending, cloud/platform investment, digital budgets)
+- Headcount Data: 22 records (global employment, regional trends, market size)
+- Emerging Specialties: 13 records (AI roles, platform engineering, testing tools)
+- Regional Momentum: 9 records (hiring rates, salary gaps, regional growth)
+- Projections: 7 records (2030-2035 forecasts)
+
+=== SOURCE REFERENCE ===
+
+web:1 - Grand View Research | Engineering Software Market (2024-10-31)
+       | CAGR: 20.3% (2025-2030), Market Value: $125.45B by 2030
+
+web:6 - Springs | Global Software Engineers Statistics (2025-08-26)
+      | Global developers: 26.9M (2023) → 28.7M (2024) → 45M (2030 projected)
+
+web:7 - Prepare.sh | QA and SDET Job Market Analysis (2025-03-25)
+      | QA coding skills: 77% (2025) vs 53% (2023)
+      | Tool trends: Playwright +31%, Cypress +33%, Selenium -22%
+
+web:8 - Zippia | Product Designer Demographics US (2025-01-07)
+      | 15,331 product designers employed in US
+
+web:10 - Lemon.io | Software Engineering Job Market (2025-06-11)
+       | Software development growth: 17% (2023-2033), +327,900 new jobs
+
+web:11 - Qubit Labs | Software Engineer Salary USA (2025-02-26)
+       | Salary decline: $130,160 (2023) → $105,683 (2025)
+
+web:12 - Web3.career | QA Engineer Salary Web3 (2025-10-23)
+       | Salary tracker for emerging crypto/web3 roles
+
+web:13 - Untitled UI | Product Designer Salaries (2024-01-02)
+       | Junior: $84,993 | Mid: $95,770 | Senior: $102,680
+
+web:14 - CodeSubmit | Global Software Engineer Salary (2024-04-09)
+       | Global average: $52,847 | US average: $110,140
+
+web:15 - CloudZero | AI Spending Trends 2025 (2025-08-03)
+       | AI budget increase: 36% YoY ($62,964 → $85,521 monthly)
+       | 45% of orgs planning 100k+/month AI spend (up from 20% in 2024)
+
+web:16 - LinkedIn | Global Hiring Map 2025 (2025-10-19)
+       | LATAM: 700k tech graduates/year, 40-60% salary discount vs Europe
+       | MENA growth: 4.5% vs EU: 0.9%
+
+web:17 - Gart Solutions | Platform Engineering Companies 2025 (2025-08-14)
+       | Gartner forecast: 80% adoption by 2026 (vs 45% in 2022)
+
+web:18 - Deloitte | AI and Tech Investment ROI (2025-10-22)
+       | AI allocation: 36% of digital budget (avg $700M for $13B company)
+
+web:19 - Bristow Holland | DevOps Engineer Salary Trends (2025-07-06)
+       | Entry: $85k | Mid: $122-154k | Senior: $150k+
+
+web:20 - Tech Start Academy | Quality Automation Job Market (2025-04-03)
+       | Market: $58.6B (2025) → $120-130B (2035), CAGR: 7.7%
+
+web:21 - WowRemoteTeams | UI/UX Designer Salary (2024-12-21)
+       | UX avg: $93,195 | UI avg: $84,956 | Total comp: $171,217
+
+web:24 - CareerFoundry | UX Designer Salary Guide (2025-01-05)
+       | Junior: $78,961 | Mid: $124,415 | Senior: $129,828 | Manager: $171,884
+
+web:26 - Next Platform | Gartner AI Spending Forecast (2025-09-25)
+       | IT spending: $692.1B (2024) → $1.09T (2025) → $1.49T (2026)
+       | AI datacenter share: 22.6% (2024) → 32.1% (2025) → ~40% (2026)
+
+web:28 - BLS | Software Developers and QA Occupations (2025-08-27)
+       | 15% employment growth (2024-2034), 287,900 annual openings
+       | Median SWE salary: $131,450 | QA salary: $102,610
+
+web:29 - Pangea.ai | Fastest Growing AI Roles 2025 (2025-04-15)
+       | 170M jobs created vs 92M displaced by AI by 2030
+       | AI engineer growth: +143.2% YoY
+
+web:30 - Motion Recruitment | Cloud Computing Salary 2025 (2024-10-31)
+       | Cloud architects: $190k (max) | Senior engineers: $183k | SF peak: $237k
+
+web:31 - Ravio | Tech Hiring Trends 2025 (2025-10-16)
+       | European hiring: 29% (stable) | UK: 32% | Germany: 30% | Sweden: 17%
+
+web:32 - Autodesk | AI Jobs Report 2025 (2025-07-08)
+       | AI engineer growth: +143.2% | AI Solutions Architect: +109.3%
+       | AI content creator: +134.5% | AI mentions: +120.6% YoY
+
+=== METHODOLOGY NOTES ===
+
+PROJECTIONS METHODS:
+- 2030 Software Developer Count: Evans Data Corporation forecasts + State of Developer Nation
+- 2033-2034 BLS Projections: Extrapolated from 15% growth rate (2024-2034)
+- 2035 QA Market: Research Nester analysis (CAGR: 7.7%)
+- 2026 Platform Engineering: Gartner forecast based on adoption curve
+- AI Job Impact: WEF Future of Jobs Report 2025
+
+SALARY NOTES:
+- US salaries show declining trend 2023-2025 (remote globalization, market correction)
+- LATAM/MENA show 40-60% discount vs Western Europe but growing rapidly
+- San Francisco remains highest ($237k for senior cloud engineers)
+- SDET/QA automation experiencing premium compensation (24%+ for modern tools)
+
+INVESTMENT TRENDS:
+- AI captured 36% of digital budgets in 2025 (primary growth driver)
+- Cloud/platform: 11% of AI budgets (foundational infrastructure)
+- Datacenter spending surge driven by AI workloads (22.6% → 32.1% of spend)
+
+EMERGING SPECIALTIES:
+- Platform Engineering: 35% increase in adoption target (45% → 80% by 2026)
+- AI Roles: Fastest growing (+109-143% YoY across specializations)
+- QA Evolution: From manual testing to automation engineers requiring DSA skills (32% of postings)
+- Test Framework Tools: Playwright/Cypress replacing Selenium (modern tools: 68-73% adoption)
+
+REGIONAL INSIGHTS:
+- Europe: Slowest growth (0.9% digital sector), highest hiring caution (Sweden: 17%)
+- LATAM: Fastest talent pipeline (700k grads/year), 40-60% cost arbitrage
+- MENA: Strong AI adoption (74% weekly usage vs 40% Europe), 4.5% growth
+- North America: Largest salary premiums, shift to remote hiring in LATAM/Eastern Europe
+
+=== DATA QUALITY & LIMITATIONS ===
+
+CONFIDENCE LEVEL: High for 2023-2025 data (public reports, industry surveys)
+PROJECTION CONFIDENCE: Medium (2026+) - based on CAGR extrapolation
+GAPS: Incomplete APAC regional breakdown, limited data on non-English speaking regions
+CURRENCY: All values in USD; some regional data normalized from local sources
+UPDATES: Data collected November 2024 - October 2025

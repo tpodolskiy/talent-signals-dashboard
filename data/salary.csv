@@ -1,0 +1,39 @@
+Topic,Year,Metric,Value,Unit,Region/Role,Source
+Salary,2024,Median software engineer salary,131450,USD,North America,web:28
+Salary,2024,Median software engineer salary,133080,USD,North America (BLS),web:28
+Salary,2025,Average software engineer salary,105683,USD,United States,web:11
+Salary,2025,Average software engineer salary,110140,USD,United States,web:14
+Salary,2025,Average software engineer salary,112484,USD,United States,web:11
+Salary,2025,Junior software engineer salary,65141,USD,United States,web:11
+Salary,2025,Senior software engineer salary,149082,USD,United States,web:11
+Salary,2023,Median software engineer salary,130160,USD,United States,web:11
+Salary,2024,Median software engineer salary,120000,USD,United States,web:11
+Salary,2025,Software engineer salary - California,146770,USD,California,web:14
+Salary,2025,Software engineer salary - Washington,145150,USD,Washington,web:14
+Salary,2025,Software engineer salary - Maryland,131240,USD,Maryland,web:14
+Salary,2025,Software engineer salary - New York,129950,USD,New York,web:14
+Salary,2024,Global average software engineer salary,52847,USD,Global,web:14
+Salary,2024,Software engineer salary - Switzerland,97518,USD,Europe,web:14
+Salary,2024,Median QA analyst and tester salary,102610,USD,North America,web:28
+Salary,2025,QA automation engineer salary (Playwright/Cypress),24,percent premium,Global,web:7
+Salary,2024,SDET salary (compensation parity with SWE),parity,comparable,Global,web:7
+Salary,2025,QA engineer salary (Web3),145000,USD,Global,web:12
+Salary,2025,Average UX designer salary,124415,USD,United States,web:24
+Salary,2025,Junior UX designer salary,78961,USD,United States,web:24
+Salary,2025,Senior UX designer salary,129828,USD,United States,web:24
+Salary,2025,UX design manager salary,171884,USD,United States,web:24
+Salary,2025,Average UI designer salary,84956,USD,United States,web:21
+Salary,2025,UX designer salary base,93195,USD,United States,web:21
+Salary,2025,UX designer total compensation,171217,USD,United States,web:21
+Salary,2025,Product designer salary (mid-level),95770,USD,United States,web:13
+Salary,2025,Junior product designer salary,84993,USD,United States,web:13
+Salary,2025,Senior product designer salary,102680,USD,United States,web:13
+Salary,2025,DevOps engineer entry-level salary,85000,USD,Global,web:19
+Salary,2025,DevOps engineer mid-level salary,122761,USD,Global,web:19
+Salary,2025,DevOps engineer mid-level salary (high),153809,USD,Global,web:19
+Salary,2025,Senior cloud architect salary (max),190000,USD,United States,web:30
+Salary,2025,Mid-level cloud engineer salary,118000,USD,United States,web:30
+Salary,2025,Senior cloud engineer salary,139000,USD,United States,web:30
+Salary,2025,Senior cloud engineer salary (max),183000,USD,United States,web:30
+Salary,2025,Mid-level cloud engineer San Francisco,148000,USD,San Francisco,web:30
+Salary,2025,Senior cloud engineer San Francisco (peak),237000,USD,San Francisco,web:30

@@ -1,0 +1,23 @@
+Topic,Year,Metric,Value,Unit,Region/Role,Source
+Headcount,2023,Global software developers,26900000,count,Global,web:6
+Headcount,2024,Global software developers,28700000,count,Global,web:6
+Headcount,2025,Global software developers,29000000,count,Global,web:6 (estimated)
+Headcount,2030,Global software developers (projected),45000000,count,Global,web:6
+Headcount,2023,Software engineers in US,1420000,count,North America,web:6
+Headcount,2024,Software development roles (projected growth),15,percent,Global,web:28
+Headcount,2034,Software developers employment (projected),1895500,count,North America,web:28
+Headcount,2024,QA job postings requiring coding skills,77,percent,Global,web:7
+Headcount,2023,QA job postings requiring coding skills,53,percent,Global,web:7
+Headcount,2024,QA job postings requiring DSA interviews,32,percent,Global,web:7
+Headcount,2025,Software quality automation market size,58.6,billion USD,Global,web:20
+Headcount,2035,Software quality automation market size (projected),125,billion USD,Global,web:20
+Headcount,2025,Product designers employed,15331,count,United States,web:8
+Headcount,2025,UX/UI designers,100000,estimate,United States,web:24
+Headcount,2025,Tech hiring rate,29,percent,Europe,web:31
+Headcount,2025,Tech hiring rate,32,percent,UK,web:31
+Headcount,2025,Tech hiring rate,30,percent,Germany,web:31
+Headcount,2025,Tech hiring rate,24,percent,Netherlands,web:31
+Headcount,2025,Tech hiring rate,22,percent,France,web:31
+Headcount,2025,Tech hiring rate,26,percent,Spain,web:31
+Headcount,2025,Tech hiring rate,17,percent,Sweden,web:31
+Headcount,2025,Tech graduates per year,700000,count,LATAM,web:16

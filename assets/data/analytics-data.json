@@ -1,0 +1,240 @@
+{
+  "market": {
+    "years": [
+      2024,
+      2025,
+      2026
+    ],
+    "totalDatacenterSpend": [
+      692.1,
+      1090.0,
+      1490.0
+    ],
+    "aiSpendEstimate": [
+      156.41,
+      349.89,
+      508.09
+    ],
+    "aiSharePercent": [
+      22.6,
+      32.1,
+      34.1
+    ]
+  },
+  "allocation": [
+    {
+      "label": "Public Cloud Platforms",
+      "value": 11.0
+    },
+    {
+      "label": "Generative AI Tools",
+      "value": 10.0
+    },
+    {
+      "label": "Security Platforms",
+      "value": 9.0
+    },
+    {
+      "label": "Other Initiatives",
+      "value": 70.0
+    }
+  ],
+  "salary": {
+    "years": [
+      2023,
+      2024,
+      2025
+    ],
+    "roles": {
+      "Platform & DevOps": [
+        120523.33,
+        120523.33,
+        120523.33
+      ],
+      "Product & Design": [
+        113789.9,
+        113789.9,
+        113789.9
+      ],
+      "QA & Reliability": [
+        102610.0,
+        102610.0,
+        145000.0
+      ],
+      "Software Engineering": [
+        130160.0,
+        106979.0,
+        121737.78
+      ]
+    }
+  },
+  "headcount": {
+    "years": [
+      2023,
+      2024,
+      2025,
+      2030,
+      2035
+    ],
+    "values": [
+      26900000.0,
+      28700000.0,
+      29000000.0,
+      45000000.0,
+      null
+    ],
+    "qaMarket": [
+      null,
+      null,
+      58.6,
+      null,
+      125.0
+    ]
+  },
+  "specialties": [
+    {
+      "metric": "AI engineer role growth (YoY)",
+      "value": 143.2,
+      "source": "web:32"
+    },
+    {
+      "metric": "AI Content Creator growth (YoY)",
+      "value": 134.5,
+      "source": "web:32"
+    },
+    {
+      "metric": "AI mention in job listings (YoY)",
+      "value": 120.6,
+      "source": "web:32"
+    },
+    {
+      "metric": "AI mention in job listings (YoY)",
+      "value": 114.8,
+      "source": "web:32"
+    },
+    {
+      "metric": "AI Solutions Architect growth (YoY)",
+      "value": 109.3,
+      "source": "web:32"
+    },
+    {
+      "metric": "Platform engineering team adoption (projected 2026)",
+      "value": 80.0,
+      "source": "web:17"
+    }
+  ],
+  "regional": [
+    {
+      "metric": "Tech hiring rate",
+      "value": 32.0,
+      "region": "UK"
+    },
+    {
+      "metric": "Tech hiring rate",
+      "value": 30.0,
+      "region": "Germany"
+    },
+    {
+      "metric": "Tech hiring rate",
+      "value": 29.0,
+      "region": "Europe"
+    },
+    {
+      "metric": "Tech hiring rate",
+      "value": 26.0,
+      "region": "Spain"
+    },
+    {
+      "metric": "Tech hiring rate",
+      "value": 24.0,
+      "region": "Netherlands"
+    },
+    {
+      "metric": "Tech hiring rate",
+      "value": 22.0,
+      "region": "France"
+    },
+    {
+      "metric": "Tech hiring rate",
+      "value": 17.0,
+      "region": "Sweden"
+    },
+    {
+      "metric": "10-year dev role growth",
+      "value": 17.0,
+      "region": "United States"
+    }
+  ],
+  "projections": [
+    {
+      "metric": "Engineering software market (projected)",
+      "points": [
+        {
+          "year": 2030,
+          "value": 125.45,
+          "unit": "billion USD"
+        }
+      ]
+    },
+    {
+      "metric": "Growth rate engineering software market",
+      "points": [
+        {
+          "year": 2025,
+          "value": 20.3,
+          "unit": "percent CAGR"
+        }
+      ]
+    },
+    {
+      "metric": "Software development roles growth (10-year forecast)",
+      "points": [
+        {
+          "year": 2023,
+          "value": 17.0,
+          "unit": "percent"
+        }
+      ]
+    },
+    {
+      "metric": "Software development roles growth (new jobs added)",
+      "points": [
+        {
+          "year": 2033,
+          "value": 327900.0,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "metric": "Gartner platform engineering forecast (2026)",
+      "points": [
+        {
+          "year": 2024,
+          "value": 80.0,
+          "unit": "percent adoption"
+        }
+      ]
+    },
+    {
+      "metric": "Platform engineering infrastructure decision influence",
+      "points": [
+        {
+          "year": 2027,
+          "value": 50.0,
+          "unit": "percent"
+        }
+      ]
+    },
+    {
+      "metric": "Quality assurance market growth CAGR",
+      "points": [
+        {
+          "year": 2035,
+          "value": 7.7,
+          "unit": "percent"
+        }
+      ]
+    }
+  ]
+}

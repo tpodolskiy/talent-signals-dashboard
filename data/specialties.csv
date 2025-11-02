@@ -1,0 +1,14 @@
+Topic,Year,Metric,Value,Unit,Region/Role,Source
+Specialties,2025,AI engineer role growth (YoY),143.2,percent,Global,web:32
+Specialties,2025,AI Solutions Architect growth (YoY),109.3,percent,Global,web:32
+Specialties,2025,AI Content Creator growth (YoY),134.5,percent,Global,web:32
+Specialties,2025,AI mention in job listings (YoY),120.6,percent,Global,web:32
+Specialties,2025,AI mention in job listings (YTD),56.1,percent,Global,web:32
+Specialties,2023,AI mention in job listings (YoY),114.8,percent,Global,web:32
+Specialties,2025,Selenium usage decrease,22,percent decline,Global,web:7
+Specialties,2025,Playwright usage increase,31,percent gain,Global,web:7
+Specialties,2025,Cypress usage increase,33,percent gain,Global,web:7
+Specialties,2025,Platform engineering team adoption (projected 2026),80,percent,Large orgs,web:17
+Specialties,2022,Platform engineering team adoption (baseline),45,percent,Large orgs,web:17
+Specialties,2030,AI jobs created (projected),170,million,Global,web:29
+Specialties,2030,Jobs displaced by AI (projected),92,million,Global,web:29
